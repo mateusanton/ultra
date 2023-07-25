@@ -40,7 +40,7 @@ class __TwigTemplate_04ca78aaf3f02f4af97a2f115cbdde60 extends Template
   <meta charset=\"UTF-8\">
   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
   <link rel=\"stylesheet\" href=\"http://localhost/ultra/assets/css/styles.css\">
-  <title>Document</title>
+  <title>Login</title>
 </head>
 
 <body>
@@ -48,11 +48,22 @@ class __TwigTemplate_04ca78aaf3f02f4af97a2f115cbdde60 extends Template
     <h1>Faça seu login</h1>
 
     <form method=\"POST\" action=\"/ultra/login/check\">
-      <input type=\"email\" name=\"e-mail\" placeholder=\"E-mail\">
+      <input type=\"email\" name=\"email\" placeholder=\"E-mail\">
       <input type=\"password\" name=\"password\" placeholder=\"Senha\">
 
       <button class=\"btn_login\">Logar</button>
-      <span class=\"msg_error\">Tentativa Inválida</span>
+
+      ";
+        // line 20
+        if ((($context["error"] ?? null) != "")) {
+            // line 21
+            echo "      <span class=\"msg_error\">";
+            echo twig_escape_filter($this->env, (($__internal_compile_0 = ($context["error"] ?? null)) && is_array($__internal_compile_0) || $__internal_compile_0 instanceof ArrayAccess ? ($__internal_compile_0["msg"] ?? null) : null), "html", null, true);
+            echo "</span>
+      ";
+        }
+        // line 23
+        echo "
     </form>
   </div>
 </body>
@@ -65,9 +76,14 @@ class __TwigTemplate_04ca78aaf3f02f4af97a2f115cbdde60 extends Template
         return "login.html";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  37 => 1,);
+        return array (  66 => 23,  60 => 21,  58 => 20,  37 => 1,);
     }
 
     public function getSourceContext()

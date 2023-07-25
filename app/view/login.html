@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="http://localhost/ultra/assets/css/styles.css">
-  <title>Document</title>
+  <title>Login</title>
 </head>
 
 <body>
@@ -12,11 +12,15 @@
     <h1>Faça seu login</h1>
 
     <form method="POST" action="/ultra/login/check">
-      <input type="email" name="e-mail" placeholder="E-mail">
+      <input type="email" name="email" placeholder="E-mail">
       <input type="password" name="password" placeholder="Senha">
 
       <button class="btn_login">Logar</button>
-      <span class="msg_error">Tentativa Inválida</span>
+
+      {% if error != '' %}
+      <span class="msg_error">{{error['msg']}}</span>
+      {% endif %}
+
     </form>
   </div>
 </body>
