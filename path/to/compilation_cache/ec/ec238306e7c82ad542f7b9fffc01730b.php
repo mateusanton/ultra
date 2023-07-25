@@ -45,7 +45,7 @@ class __TwigTemplate_04ca78aaf3f02f4af97a2f115cbdde60 extends Template
 
 <body>
   <div class=\"box_login\">
-    <h1>Faça seu login</h1>
+    <h1>Login</h1>
 
     <form method=\"POST\" action=\"/ultra/login/check\">
       <input type=\"email\" name=\"email\" placeholder=\"E-mail\">

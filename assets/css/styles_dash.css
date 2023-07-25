@@ -3,9 +3,12 @@
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+body {
+  background: #eff3fb;
+}
 
 header {
-  background: #66717e;
+  background: #d4a754;
   width: 100%;
   height: 50px;
   line-height: 50px;
@@ -29,6 +32,7 @@ header {
 
 h1 {
   text-align: center;
+  color: #010204;
 }
 
 .box_dash {
@@ -43,10 +47,14 @@ h1 {
 .box_dash button {
   border: none;
   border-radius: 10px;
-  background: #687d86;
+  background: #c84832;
   padding: 10px;
   color: #fff;
   cursor: pointer;
+}
+
+.box_dash button:hover {
+  background: #6d271b;
 }
 
 table {
@@ -56,6 +64,6 @@ table {
 }
 
 table thead {
-  color: #fff;
-  background: #66717e;
+  color: #010204;
+  background: #eff4d2;
 }
